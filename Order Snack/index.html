@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/OrderStyle.css"> 
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header-flex">
+        <button class="back-btn" onclick="window.location.href='/index.html'">Back</button>
+        <h1>Order Snack</h1>
+    </header>
+
+    <main>
+
+        <div class="projects">
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://assets.bonappetit.com/photos/61b7c725ae5736f3022cb4fb/1:1/w_3505,h_3505,c_limit/20211207%20ITS%20Snack%20Mix%20Lede.jpg" alt="Snack Mix">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Snack Mix</h2>
+                    <p>A crunchy, savory blend of nuts, pretzels, and cereal—perfect for snacking anytime.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiTKwuwS2rZcPK0wjmR6Qpn0uVN1o8VebAtw&s" alt="Potato Chips">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Potato Chips</h2>
+                    <p>Classic crispy potato chips, lightly salted and always satisfying for your snack cravings.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlDl2d6qRSYyzA7bk-4mIFkOn2UXg0D07V-w&s" alt="Cheese Crackers">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Cheese Crackers</h2>
+                    <p>Cheesy, crunchy crackers baked to perfection—a favorite for cheese lovers.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+             <div class="project-card">
+                <div class="product-image">
+                    <img src="https://assets.bonappetit.com/photos/61b7c725ae5736f3022cb4fb/1:1/w_3505,h_3505,c_limit/20211207%20ITS%20Snack%20Mix%20Lede.jpg"
+                        alt="Product Image">
+                    <span class="badge">New</span>
+                </div>
+
+                <div class="product-details">
+                    <h2>Product Name</h2>
+                    <p>Product description goes here it's a brief overview of the product features</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiTKwuwS2rZcPK0wjmR6Qpn0uVN1o8VebAtw&s"
+                        alt="Product Image">
+                    <span class="badge">New</span>
+                </div>
+
+                <div class="product-details">
+                    <h2>Product Name</h2>
+                    <p>Product description goes here it's a brief overview of the product features</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlDl2d6qRSYyzA7bk-4mIFkOn2UXg0D07V-w&s"
+                        alt="Product Image">
+                    <span class="badge">New</span>
+                </div>
+
+                <div class="product-details">
+                    <h2>Bread</h2>
+                    <p>Product description goes here it's a brief overview of the product features</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // Quantity button logic for all project cards
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach(card => {
+            const minusBtn = card.querySelector('.qty-btn:first-child');
+            const plusBtn = card.querySelector('.qty-btn:last-child');
+            const qtyNumber = card.querySelector('.qty-number');
+            let qty = 0;
+            minusBtn.addEventListener('click', () => {
+                if (qty > 0) {
+                    qty--;
+                    qtyNumber.textContent = qty;
+                }
+            });
+            plusBtn.addEventListener('click', () => {
+                qty++;
+                qtyNumber.textContent = qty;
+            });
+        });
+    </script>
+
+    <footer>
+        <p> &copy; 2024 My Portfolio</p>
+    </footer>
+    </div>
+</body>
+
+</html>

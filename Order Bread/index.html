@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/OrderStyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header-flex">
+        <button class="back-btn" onclick="window.location.href='/index.html'">Back</button>
+        <h1>Order Bread</h1>
+    </header>
+
+    <main>
+
+        <div class="projects">
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://edube.org/uploads/media/default/0001/04/product_image.jpg" alt="Classic White Bread">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Classic White Bread</h2>
+                    <p>Soft, fluffy, and perfect for sandwiches or toast. A timeless bakery favorite.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paul_hollywoods_crusty_83536_16x9.jpg" alt="Crusty Artisan Loaf">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Crusty Artisan Loaf</h2>
+                    <p>Handcrafted with a golden crust and chewy crumb, ideal for dipping or sharing.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://breadtopia.com/wp-content/uploads/2023/01/20230104_131203-x-Copy.jpg" alt="Whole Wheat Bread">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Whole Wheat Bread</h2>
+                    <p>Hearty and wholesome, made with 100% whole grains for a rich, nutty flavor.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://edube.org/uploads/media/default/0001/04/product_image.jpg" alt="Classic White Bread">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Classic White Bread</h2>
+                    <p>Soft, fluffy, and perfect for sandwiches or toast. A timeless bakery favorite.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paul_hollywoods_crusty_83536_16x9.jpg" alt="Crusty Artisan Loaf">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Crusty Artisan Loaf</h2>
+                    <p>Handcrafted with a golden crust and chewy crumb, ideal for dipping or sharing.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://breadtopia.com/wp-content/uploads/2023/01/20230104_131203-x-Copy.jpg" alt="Whole Wheat Bread">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Whole Wheat Bread</h2>
+                    <p>Hearty and wholesome, made with 100% whole grains for a rich, nutty flavor.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+        
+
+    </main>
+
+    <script>
+        // Quantity button logic for all project cards
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach(card => {
+            const minusBtn = card.querySelector('.qty-btn:first-child');
+            const plusBtn = card.querySelector('.qty-btn:last-child');
+            const qtyNumber = card.querySelector('.qty-number');
+            let qty = 0;
+            minusBtn.addEventListener('click', () => {
+                if (qty > 0) {
+                    qty--;
+                    qtyNumber.textContent = qty;
+                }
+            });
+            plusBtn.addEventListener('click', () => {
+                qty++;
+                qtyNumber.textContent = qty;
+            });
+        });
+    </script>
+
+    <footer>
+        <p> &copy; 2024 My Portfolio</p>
+    </footer>
+    </div>
+</body>
+
+</html>

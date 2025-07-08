@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/OrderStyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header-flex">
+        <button class="back-btn" onclick="window.location.href='/index.html'">Back</button>
+        <h1>Order Drinks</h1>
+    </header>
+
+    <main>
+        <div class="projects">
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/delish-220517-dirty-shirley-cocktail-001-ab-web-1657145301.jpg" alt="Dirty Shirley">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Dirty Shirley</h2>
+                    <p>A fun, fizzy cocktail with lemon-lime soda, grenadine, and a splash of vodka. Sweet and refreshing!</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/screwdriver-cocktail-4-1660683789.jpg?crop=0.9997369113391213xw:1xh;center,top&resize=980:*" alt="Screwdriver">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Screwdriver</h2>
+                    <p>Classic cocktail made with fresh orange juice and vodka. Simple, citrusy, and delicious.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://punchdrink.com/wp-content/uploads/2023/11/Vertical_SoundAndFury.jpg?w=600" alt="Sound and Fury">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Sound and Fury</h2>
+                    <p>A vibrant, modern drink with tropical flavors and a bold, colorful presentation.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/delish-220517-dirty-shirley-cocktail-001-ab-web-1657145301.jpg" alt="Dirty Shirley">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Dirty Shirley</h2>
+                    <p>A fun, fizzy cocktail with lemon-lime soda, grenadine, and a splash of vodka. Sweet and refreshing!</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/screwdriver-cocktail-4-1660683789.jpg?crop=0.9997369113391213xw:1xh;center,top&resize=980:*" alt="Screwdriver">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Screwdriver</h2>
+                    <p>Classic cocktail made with fresh orange juice and vodka. Simple, citrusy, and delicious.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="product-image">
+                    <img src="https://punchdrink.com/wp-content/uploads/2023/11/Vertical_SoundAndFury.jpg?w=600" alt="Sound and Fury">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-details">
+                    <h2>Sound and Fury</h2>
+                    <p>A vibrant, modern drink with tropical flavors and a bold, colorful presentation.</p>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // Quantity button logic for all project cards
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach(card => {
+            const minusBtn = card.querySelector('.qty-btn:first-child');
+            const plusBtn = card.querySelector('.qty-btn:last-child');
+            const qtyNumber = card.querySelector('.qty-number');
+            let qty = 0;
+            minusBtn.addEventListener('click', () => {
+                if (qty > 0) {
+                    qty--;
+                    qtyNumber.textContent = qty;
+                }
+            });
+            plusBtn.addEventListener('click', () => {
+                qty++;
+                qtyNumber.textContent = qty;
+            });
+        });
+    </script>
+
+    <footer>
+        <p> &copy; 2024 My Portfolio</p>
+    </footer>
+    </div>
+</body>
+
+</html>
